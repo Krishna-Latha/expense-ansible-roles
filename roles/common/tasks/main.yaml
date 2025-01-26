@@ -1,10 +1,10 @@
 - name: remove existing directory
-  ansible.builtin.files:
+  ansible.builtin.file:
     path: "{{ APP_LOCATION }}" # backend folder /app, frontend folder user/share/nginx/html
     state: obsent
 
 - name: create app directory
-  ansible.builtin.files:
+  ansible.builtin.file:
     path: "{{ APP_LOCATION }}"
     state: directory
 
