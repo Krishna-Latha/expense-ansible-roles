@@ -38,8 +38,8 @@
 
     # now copy file to 
 - name: copy backend service
-  ansible.builtin.template: # passing service from template and taking variables at runtime
-    src: backend.service.js
+  ansible.builtin.template: # it will serarch in templates folder and passing service from template and taking variables at runtime
+    src: backend.service.j2
     dest: /etc/systemd/system/backend.service
 
 - name: install python libs
